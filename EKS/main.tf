@@ -5,8 +5,7 @@ module "vpc" {
   name = "my-vpc"
   cidr = var.vpc_cidr
 
-  cluster_endpoint_public_access = true
-
+  
   azs             = data.aws_availability_zones.azs.names
   private_subnets = var.private_subnets
   public_subnets  = var.public_subnets
